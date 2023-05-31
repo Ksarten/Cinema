@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 require __DIR__ . '/vendor/autoload.php'; //загрузка всех установленных библиотек
 use Dotenv\Dotenv;                        //импорт класса Dotenv из пространства имен dotenv
@@ -17,4 +18,5 @@ try {
 catch(PDOException $e) {
     echo "Ошибка подключения к БД: " . $e->getMessage(), $e->getCode( );
     die();
+
 }
